@@ -1,0 +1,86 @@
+:root {
+    --color1: rgb(243, 86, 86);
+    --color2: rgb(40, 194, 40);
+    --color3: rgb(9, 9, 228);
+    --color4: rgb(240, 240, 51);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.container {
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.circle {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+
+
+}
+
+.anim-1 {
+    background-color: var(--color2);
+    margin-left: 80px;
+    animation: animation-1 2s infinite linear alternate;
+}
+
+@keyframes animation-1 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(160px);
+    }
+}
+
+.anim-2 {
+    background-color: var(--color3);
+    animation: animation-2 2s infinite linear alternate;
+}
+
+@keyframes animation-2 {
+    0% {
+        transform: translate(160px, 0);
+    }
+
+    100% {
+        transform: translate(0, 160px);
+    }
+}
+
+.anim-3 {
+    background-color: var(--color4);
+    animation: animation-3 2s infinite linear alternate;
+}
+
+@keyframes animation-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(160px, 0);
+    }
+
+    75% {
+        transform: translate(0, 160px);
+    }
+
+    100% {
+        transform: translate(160px, 160px);
+    }
+}
